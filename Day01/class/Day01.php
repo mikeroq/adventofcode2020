@@ -28,7 +28,7 @@ class Day01
         return $this->sum;
     }
 
-    protected function findSums()
+    protected function findTwoSums()
     {
         $haystack = $this->input;
         foreach ($haystack as $key => $value) {
@@ -42,11 +42,40 @@ class Day01
         return false;
     }
 
-    public function findAnswer()
+    protected function findThreeSums()
     {
-        if ($this->findSums()) {
+        $left = $right = '';
+        $haystack = $this->input;
+        sort($haystack);
+        $size = sizeof($haystack);
+        for ($i = 0; $i < $size - 2; $i++) { 
+            $left = $i + 1; 
+            $right = $size - 1;  
+            while ($left < $right) { 
+                if ($haystack[$i] + $haystack[$left] + $haystack[$right] == $this->target) { 
+                    return $this->found = [$haystack[$i], $haystack[$left], $haystack[$right]];
+                } else if ($haystack[$i] + $haystack[$left] + $haystack[$right] < $this->target) {
+                    $left++; 
+                } else {
+                    $right--; 
+                } 
+            } 
+        }
+        return false;
+    }
+
+    public function findFirstAnswer()
+    {
+        if ($this->findTwoSums()) {
             return array_product($this->found);
         }
         return false;        
+    }
+    public function findSecondAnswer() 
+    {
+        if ($this->findThreeSums()) {
+            return array_product($this->found);
+        }
+        return false;   
     }
 }

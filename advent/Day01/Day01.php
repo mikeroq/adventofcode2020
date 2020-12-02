@@ -4,12 +4,11 @@ namespace pwnstar\AdventOfCode2020\Day01;
 class Day01
 {
     protected $input = [];
-    protected $target;
+    protected $target = 2020;
     protected $found = [];
     
     public function __construct($file, $target) 
     {
-        $this->target = $target;
         $this->readInput($file);
     }
 

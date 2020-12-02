@@ -1,5 +1,5 @@
 <?php 
-namespace pwnstar\AdventOfCode;
+namespace pwnstar\AdventOfCode2020\Day01;
 
 class Day01
 {

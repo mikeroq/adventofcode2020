@@ -1,6 +1,7 @@
 <?php 
-require("class/Day01.php");
+require("Day01Class.php");
 use pwnstar\AdventOfCode\Day01;
+
 $start_time = microtime(true);
 $day01 = new Day01("input.txt", 2020);
 

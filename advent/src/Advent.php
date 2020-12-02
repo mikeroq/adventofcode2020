@@ -4,13 +4,13 @@ require_once "vendor/autoload.php";
 
 class Advent 
 {
-    public function runDay(string $dayClass, string $input, $assert)
+    public function runDay(string $dayClass, string $input, $assert = '')
     {
         $start_time = microtime(true);
         $class = 'pwnstar\AdventOfCode2020\\' . $dayClass . '\\' . $dayClass;
         $day = new $class($input, $assert);
         echo 'First Answer: ' . $day->findFirstAnswer() . PHP_EOL
             . 'Second Answer: ' . $day->findSecondAnswer() . PHP_EOL
-            . 'Execution finished in ' . (microtime(true) - $start_time) . ' seconds.';
+            . 'Execution finished in ' . (microtime(true) - $start_time) . ' seconds.' . PHP_EOL;
     }
 }

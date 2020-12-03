@@ -5,58 +5,18 @@ use PHPUnit\Framework\TestCase;
 
 final class Day02Test extends TestCase
 {
-    public function testPart1Equals514579(): void 
+    public function testPart1Equals2(): void 
     {
-        $input = [
-            [
-                'min' => 1,
-                'max' => 3,
-                'letter' => 'a',
-                'password' => 'abcde',
-            ],
-            [
-                'min' => 1,
-                'max' => 3,
-                'letter' => 'b',
-                'password' => 'cdefg',
-            ],
-            [
-                'min' => 2,
-                'max' => 9,
-                'letter' => 'c',
-                'password' => 'ccccccccc',
-            ],
-        ];
         $day02 = new Day02();
-        $day02->testInput($input);
+        $day02->importInput('advent/Day02/test_input.txt');
 
         $this->assertSame($day02->findFirstAnswer(), 2);
     }
 
-    public function testPart2Equals241861950(): void
+    public function testPart2Equals1(): void
     {
-        $input = [
-            [
-                'min' => 1,
-                'max' => 3,
-                'letter' => 'a',
-                'password' => 'abcde',
-            ],
-            [
-                'min' => 1,
-                'max' => 3,
-                'letter' => 'b',
-                'password' => 'cdefg',
-            ],
-            [
-                'min' => 2,
-                'max' => 9,
-                'letter' => 'c',
-                'password' => 'ccccccccc',
-            ],
-        ];
         $day02 = new Day02();
-        $day02->testInput($input);
+        $day02->importInput('advent/Day02/test_input.txt');
 
         $this->assertSame($day02->findSecondAnswer(), 1);
     }

@@ -5,4 +5,8 @@ if (isset($argv[1])) {
     $day = 'Day' . sprintf('%02d', $argv[1]); 
     echo "*** TESTING DAY $day ***" . PHP_EOL;
     system('"vendor/bin/phpunit" --testdox advent/' . $day . '/' . $day . 'Test.php');
+} else {
+    system('"vendor/bin/phpunit" --testdox advent/Day01/Day01Test.php');
+    system('"vendor/bin/phpunit" --testdox advent/Day02/Day02Test.php');
+    system('"vendor/bin/phpunit" --testdox advent/Day03/Day03Test.php');
 }

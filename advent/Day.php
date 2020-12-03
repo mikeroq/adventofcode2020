@@ -10,10 +10,6 @@ class Day
         $this->input = explode("\r\n", trim(file_get_contents($file)));
         $this->formatInput();
     }
-    public function testInput($input) :void
-    {
-        $this->input = $input;
-    }
     protected function formatInput() :void
     {
         

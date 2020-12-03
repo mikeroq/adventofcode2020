@@ -5,25 +5,19 @@ use PHPUnit\Framework\TestCase;
 
 final class Day03Test extends TestCase
 {
-    public function testPart1Equals514579(): void 
+    public function testPart1Equals7(): void 
     {
-        $input = [
-            
-        ];
         $day03 = new Day03();
-        $day03->testInput($input);
+        $day03->importInput('advent/Day03/test_input.txt');
 
-        $this->assertSame($day03->findFirstAnswer(), 2);
+        $this->assertSame($day03->findFirstAnswer(), 7);
     }
 
-    public function testPart2Equals241861950(): void
+    public function testPart2Equals336(): void
     {
-        $input = [
-
-        ];
         $day03 = new Day03();
-        $day03->testInput($input);
+        $day03->importInput('advent/Day03/test_input.txt');
 
-        $this->assertSame($day03->findSecondAnswer(), 1);
+        $this->assertSame($day03->findSecondAnswer(), 336);
     }
 }

@@ -6,27 +6,15 @@ class Day01
     protected $input = [];
     protected $target = 2020;
     protected $found = [];
-    
-    public function __construct($file, $target) 
-    {
-        $this->readInput($file);
-    }
 
-    protected function readInput($file)
+    public function getInput($file)
     {
         $this->input = explode("\r\n", trim(file_get_contents($file)));
     }
-
-    public function getInput()
+    public function setInput($input)
     {
-        return $this->input;
+        $this->input = $input;
     }
-
-    public function getSum()
-    {
-        return $this->sum;
-    }
-
     protected function findTwoSums()
     {
         $haystack = $this->input;
@@ -40,7 +28,6 @@ class Day01
         }
         return false;
     }
-
     protected function findThreeSums()
     {
         $left = $right = '';
@@ -62,7 +49,6 @@ class Day01
         }
         return false;
     }
-
     public function findFirstAnswer()
     {
         if ($this->findTwoSums()) {

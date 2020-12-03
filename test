@@ -1,0 +1,8 @@
+<?php
+require_once "vendor/autoload.php";
+
+if (isset($argv[1])) {
+    $day = 'Day' . sprintf('%02d', $argv[1]); 
+    echo "*** TESTING DAY $day ***" . PHP_EOL;
+    system('"vendor/bin/phpunit" advent/' . $day . '/' . $day . 'Test.php');
+}

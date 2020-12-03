@@ -4,15 +4,8 @@ namespace pwnstar\AdventOfCode2020\Day02;
 class Day02
 {
     protected $input = [];
-    protected $found = [];
     
-    public function __construct($file, $target = '') 
-    {
-        $this->target = $target;
-        $this->readInput($file);
-    }
-
-    protected function readInput($file)
+    public function getInput($file)
     {
         $input = explode("\r\n", trim(file_get_contents($file)));
         $this->input = [];
@@ -28,7 +21,6 @@ class Day02
             ];
         }
     }
-
     public function findValidPasswords()
     {
         $match = 0;
@@ -40,7 +32,6 @@ class Day02
         }
         return $match;
     }
-
     public function findValidPasswordsPart2()
     {
         $match = 0;
@@ -55,7 +46,6 @@ class Day02
         }
         return $match;
     }
-
     public function findFirstAnswer()
     {
         $match = $this->findValidPasswords();

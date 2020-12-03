@@ -8,10 +8,10 @@ $advent = new Advent();
 if (isset($argv[1])) {
     $advent->runDay($argv[1]);
 } else {
-    $advent->runDay(1);
-    $advent->runDay(2);
-    $advent->runDay(3);
-
+    $doneDays = 3;
+    for ($i = 1; $i <= $doneDays; $i++) {
+        $advent->runDay($i);
+    }
 }
 
 

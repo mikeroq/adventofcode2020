@@ -5,7 +5,7 @@ use PHPUnit\Framework\TestCase;
 
 final class Day01Test extends TestCase
 {
-    public function testPart1(): void 
+    public function testPart1Equals514579(): void 
     {
         $input = [
             '1721',
@@ -16,12 +16,12 @@ final class Day01Test extends TestCase
             '1456'
         ];
         $day01 = new Day01();
-        $day01->setInput($input);
+        $day01->testInput($input);
 
         $this->assertSame($day01->findFirstAnswer(), 514579);
     }
 
-    public function testPart2(): void
+    public function testPart2Equals241861950(): void
     {
         $input = [
             '1721',
@@ -32,7 +32,7 @@ final class Day01Test extends TestCase
             '1456'
         ];
         $day01 = new Day01();
-        $day01->setInput($input);
+        $day01->testInput($input);
 
         $this->assertSame($day01->findSecondAnswer(), 241861950);
     }

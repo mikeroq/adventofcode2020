@@ -11,7 +11,7 @@ class Advent
         $class = 'pwnstar\AdventOfCode2020\\' . $dayClass . '\\' . $dayClass;
         if (class_exists(($class))) {
             $day = new $class();
-            $day->getInput('advent/' . $dayClass . '/input.txt');
+            $day->importInput('advent/' . $dayClass . '/input.txt');
             echo $dayClass . ' - First Answer: ' . $day->findFirstAnswer() . PHP_EOL
                 . $dayClass . ' - Second Answer: ' . $day->findSecondAnswer() . PHP_EOL
                 . $dayClass . ' - Execution finished in ' . (microtime(true) - $start_time) . ' seconds.' . PHP_EOL;

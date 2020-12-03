@@ -1,20 +1,18 @@
 <?php 
 namespace pwnstar\AdventOfCode2020\Day01;
 
-class Day01
+use pwnstar\AdventOfCode2020\Day;
+
+class Day01 extends Day
 {
-    protected $input = [];
     protected $target = 2020;
     protected $found = [];
 
-    public function getInput($file)
+    protected function formatInput() :void
     {
-        $this->input = explode("\r\n", trim(file_get_contents($file)));
+        
     }
-    public function setInput($input)
-    {
-        $this->input = $input;
-    }
+
     protected function findTwoSums()
     {
         $haystack = $this->input;

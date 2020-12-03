@@ -1,27 +1,28 @@
 <?php 
 namespace pwnstar\AdventOfCode2020\Day02;
 
-class Day02
+use pwnstar\AdventOfCode2020\Day;
+
+class Day02 extends Day
 {
-    protected $input = [];
-    
-    public function getInput($file)
+   
+    protected function formatInput() :void
     {
-        $input = explode("\r\n", trim(file_get_contents($file)));
-        $this->input = [];
-        foreach ($input as $row) {
+        $new = [];
+        foreach ($this->input as $row) {
             $array = explode(" ", $row);
             $range = explode("-", $array[0]);
             $letter = str_replace(":", "", $array[1]);
-            $this->input[] = [
+            $new[] = [
                 'min' => $range[0],
                 'max' => $range[1],
                 'letter' => $letter,
                 'password' => $array[2],
             ];
         }
+        $this->input = $new;
     }
-    public function findValidPasswords()
+    protected function findValidPasswords()
     {
         $match = 0;
         foreach ($this->input as $password) {
@@ -32,7 +33,7 @@ class Day02
         }
         return $match;
     }
-    public function findValidPasswordsPart2()
+    protected function findValidPasswordsPart2()
     {
         $match = 0;
         foreach ($this->input as $password) {

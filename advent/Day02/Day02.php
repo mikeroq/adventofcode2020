@@ -1,12 +1,13 @@
-<?php 
+<?php
+
 namespace pwnstar\AdventOfCode2020\Day02;
 
 use pwnstar\AdventOfCode2020\Day;
 
 class Day02 extends Day
 {
-   
-    protected function formatInput() :void
+
+    protected function formatInput(): void
     {
         $new = [];
         foreach ($this->input as $row) {
@@ -22,6 +23,7 @@ class Day02 extends Day
         }
         $this->input = $new;
     }
+
     protected function findValidPasswords()
     {
         $match = 0;
@@ -33,20 +35,20 @@ class Day02 extends Day
         }
         return $match;
     }
+
     protected function findValidPasswordsPart2()
     {
         $match = 0;
         foreach ($this->input as $password) {
-            $count1 = substr($password['password'], $password['min']-1, 1);
-            $count2 = substr($password['password'], $password['max']-1, 1);
-            if ($count1 == $password['letter'] && $count2 == $password['letter']) {
-                //skip
-            } else if ($count1 == $password['letter'] || $count2 == $password['letter']) {
+            $count1 = substr($password['password'], $password['min'] - 1, 1);
+            $count2 = substr($password['password'], $password['max'] - 1, 1);
+            if ($count1 == $password['letter'] xor $count2 == $password['letter']) {
                 $match++;
-            }   
+            }
         }
         return $match;
     }
+
     public function findFirstAnswer()
     {
         $match = $this->findValidPasswords();
@@ -55,7 +57,8 @@ class Day02 extends Day
         }
         return false;
     }
-    public function findSecondAnswer() 
+
+    public function findSecondAnswer()
     {
         $match = $this->findValidPasswordsPart2();
         if ($match > 0) {

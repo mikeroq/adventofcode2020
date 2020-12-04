@@ -1,14 +1,16 @@
-<?php 
+<?php
+
 namespace pwnstar\AdventOfCode2020;
+
 require_once "vendor/autoload.php";
 
-class Advent 
+class Advent
 {
     public function runDay(int $day)
     {
-        $dayClass = 'Day' . sprintf('%02d', $day); 
+        $dayClass = 'Day' . sprintf('%02d', $day);
         $start_time = microtime(true);
-        $class = 'pwnstar\AdventOfCode2020\\' . $dayClass . '\\' . $dayClass;
+        $class = "pwnstar\\AdventOfCode2020\\{$dayClass}\\{$dayClass}";
         if (class_exists(($class))) {
             $day = new $class();
             $day->importInput('advent/' . $dayClass . '/input.txt');

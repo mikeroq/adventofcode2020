@@ -10,7 +10,7 @@ final class Day02Test extends TestCase
         $day02 = new Day02();
         $day02->importInput('advent/Day02/test_input.txt');
 
-        $this->assertSame($day02->findFirstAnswer(), 2);
+        $this->assertSame(2, $day02->findFirstAnswer());
     }
 
     public function testPart2Equals1(): void
@@ -18,6 +18,6 @@ final class Day02Test extends TestCase
         $day02 = new Day02();
         $day02->importInput('advent/Day02/test_input.txt');
 
-        $this->assertSame($day02->findSecondAnswer(), 1);
+        $this->assertSame(1, $day02->findSecondAnswer());
     }
 }

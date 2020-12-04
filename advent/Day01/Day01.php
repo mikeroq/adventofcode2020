@@ -1,18 +1,27 @@
-<?php 
+<?php
+
 namespace pwnstar\AdventOfCode2020\Day01;
 
 use pwnstar\AdventOfCode2020\Day;
 
 class Day01 extends Day
 {
-    protected $target = 2020;
-    protected $found = [];
+    /**
+     * @var int
+     */
+    protected int $target = 2020;
+    /**
+     * @var array
+     */
+    protected array $found = [];
 
-    protected function formatInput() :void
+    protected function formatInput(): void
     {
-        
     }
 
+    /**
+     * @return bool
+     */
     protected function findTwoSums()
     {
         $haystack = $this->input;
@@ -26,39 +35,50 @@ class Day01 extends Day
         }
         return false;
     }
+
+    /**
+     * @return array|false
+     */
     protected function findThreeSums()
     {
-        $left = $right = '';
         $haystack = $this->input;
         sort($haystack);
         $size = sizeof($haystack);
-        for ($i = 0; $i < $size - 2; $i++) { 
-            $left = $i + 1; 
-            $right = $size - 1;  
-            while ($left < $right) { 
-                if ($haystack[$i] + $haystack[$left] + $haystack[$right] == $this->target) { 
+        for ($i = 0; $i < $size - 2; $i++) {
+            $left = $i + 1;
+            $right = $size - 1;
+            while ($left < $right) {
+                if ($haystack[$i] + $haystack[$left] + $haystack[$right] == $this->target) {
                     return $this->found = [$haystack[$i], $haystack[$left], $haystack[$right]];
-                } else if ($haystack[$i] + $haystack[$left] + $haystack[$right] < $this->target) {
-                    $left++; 
+                } elseif ($haystack[$i] + $haystack[$left] + $haystack[$right] < $this->target) {
+                    $left++;
                 } else {
-                    $right--; 
-                } 
-            } 
+                    $right--;
+                }
+            }
         }
         return false;
     }
+
+    /**
+     * @return false|float|int
+     */
     public function findFirstAnswer()
     {
         if ($this->findTwoSums()) {
             return array_product($this->found);
         }
-        return false;        
+        return false;
     }
-    public function findSecondAnswer() 
+
+    /**
+     * @return false|float|int
+     */
+    public function findSecondAnswer()
     {
         if ($this->findThreeSums()) {
             return array_product($this->found);
         }
-        return false;   
+        return false;
     }
 }

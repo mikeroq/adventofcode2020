@@ -1,17 +1,24 @@
-<?php 
+<?php
+
 namespace pwnstar\AdventOfCode2020;
 
-class Day 
+class Day
 {
-    protected $input = [];
+    /**
+     * @var array
+     */
+    protected array $input = [];
 
-    public function importInput($file) :void
+    /**
+     * @param $file
+     */
+    public function importInput($file): void
     {
         $this->input = explode("\r\n", trim(file_get_contents($file)));
         $this->formatInput();
     }
-    protected function formatInput() :void
+
+    protected function formatInput(): void
     {
-        
     }
 }

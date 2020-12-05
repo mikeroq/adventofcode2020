@@ -21,7 +21,7 @@ final class Day04Test extends TestCase
         $this->assertSame(4, $Day04->findSecondAnswer());
     }
 
-    public function testValidPassportEquals0WithAllInvalidList(): void
+    public function testValidPassportsEquals0WithAllInvalidList(): void
     {
         $Day04 = new Day04();
         $Day04->importInput('./advent/Day04/test_invalid_passports.txt');

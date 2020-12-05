@@ -17,6 +17,7 @@ class Day01 extends Day
 
     protected function formatInput(): void
     {
+        $this->explodeInputByNewLine();
     }
 
     /**

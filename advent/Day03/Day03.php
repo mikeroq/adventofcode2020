@@ -8,6 +8,7 @@ class Day03 extends Day
 {
     public function formatInput(): void
     {
+        $this->explodeInputByNewLine();
         $new = [];
         foreach ($this->input as $line) {
             $new[] = str_split($line, 1);

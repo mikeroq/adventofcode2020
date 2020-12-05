@@ -11,6 +11,7 @@ class Day04 extends Day
 
     public function formatInput(): void
     {
+        $this->explodeInputByBlankLines();
         $new = [];
         foreach ($this->input as $line) {
             $re = '/(?<key>[^:]+):(?<value>[^\s]+)/';
@@ -22,7 +23,7 @@ class Day04 extends Day
         foreach ($new as $line) {
             $passport = [];
             foreach ($line as $entry) {
-               $passport[$entry['key']] = $entry['value'];
+                $passport[$entry['key']] = $entry['value'];
             }
             array_push($this->input, $passport);
         }
@@ -48,7 +49,7 @@ class Day04 extends Day
             'hgt' => "/^59in$|^6\din$|^7[0-6]in$|^1[5-8]\dcm$|^1[6-8]\dcm$|^19[0-3]cm$/", //150-193cm 59-76in
             'hcl' => "/^#[0-9A-Fa-f]{6}$/", // hex color with # 6 digits
             'ecl' => "/^amb$|^blu$|^brn$|^gry$|^grn$|^hzl$|^oth$/", // amb, blu, brn, gry, grn, hzl, oth
-            'pid' => "/\d{9}/", // 9 digits
+            'pid' => "/^\d{9}$/", // 9 digits
             'cid' => "/(.*)/" // skip
         ];
         foreach ($item as $key => $value) {

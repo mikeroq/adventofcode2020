@@ -9,6 +9,7 @@ class Day02 extends Day
 
     protected function formatInput(): void
     {
+        $this->explodeInputByNewLine();
         $new = [];
         foreach ($this->input as $row) {
             $array = explode(" ", $row);

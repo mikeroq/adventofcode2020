@@ -49,7 +49,7 @@ class Day04 extends Day
             'hcl' => "/^#[0-9A-Fa-f]{6}$/", // hex color with # 6 digits
             'ecl' => "/^amb$|^blu$|^brn$|^gry$|^grn$|^hzl$|^oth$/", // amb, blu, brn, gry, grn, hzl, oth
             'pid' => "/\d{9}/", // 9 digits
-            'cid' => '/(.*)/' // skip
+            'cid' => "/(.*)/" // skip
         ];
         foreach ($item as $key => $value) {
             $match = preg_match($rules[$key], $value);

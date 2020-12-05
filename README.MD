@@ -9,8 +9,8 @@ Here are my Advent Of Code 2020 solutions, written in PHP.
 | ✅ [Day 1: Report Repair](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day01)| 🌠 | 🌠 |
 | ✅ [Day 2: Password Philosophy](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day02)| 🌠 | 🌠 |
 | ✅ [Day 3: Toboggan Trajectory](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day03)| 🌠 | 🌠 |
-| [Day 4: Passport Processing](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day04)| 🌠 | 🌠 |
-| [Day 5: TBD]()| | |
+| ✅ [Day 4: Passport Processing](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day04)| 🌠 | 🌠 |
+| ✅ [Day 5: Binary Boarding](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day05)| 🌠 | 🌠 |
 | [Day 6: TBD]()| | |
 | [Day 7: TBD]()| | |
 | [Day 8: TBD]()| | |

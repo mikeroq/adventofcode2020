@@ -11,7 +11,7 @@ Here are my Advent Of Code 2020 solutions, written in PHP.
 | ✅ [Day 3: Toboggan Trajectory](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day03)| 🌠 | 🌠 |
 | ✅ [Day 4: Passport Processing](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day04)| 🌠 | 🌠 |
 | ✅ [Day 5: Binary Boarding](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day05)| 🌠 | 🌠 |
-| [Day 6: TBD]()| | |
+| ✅ [Day 6: Custom Customs](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day06)| 🌠 | 🌠 |
 | [Day 7: TBD]()| | |
 | [Day 8: TBD]()| | |
 | [Day 9: TBD]()| | |

@@ -25,10 +25,10 @@ Here is an example batch file containing four passports:
 ## Problem 2
 
 
-## Day 2 Solution
+## Solution
 
 ```
 Day04 - First Answer: 230
 Day04 - Second Answer: 156
-Day04 - Execution finished in 0.0037369728088379 seconds.
+Day04 - Execution finished in 0.0034339427947998 seconds.
 ```

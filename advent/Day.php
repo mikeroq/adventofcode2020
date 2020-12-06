@@ -25,10 +25,11 @@ class Day
 
     public function explodeInputByNewLine()
     {
-        $this->input = explode("\r\n", $this->file);
+        $this->input = explode("\r\n", trim($this->file));
     }
     public function explodeInputByBlankLines()
     {
-        $this->input = preg_split('#\n\s*\n#Uis' , $this->file);
+//        $this->input = preg_split('#\n\s*\n#Uis' , $this->file);
+        $this->input = explode(PHP_EOL.PHP_EOL, $this->file);
     }
 }

@@ -24,7 +24,7 @@ if (isset($args)) {
             if (!empty($args->getOpt('day'))) {
                 $advent->runDay($args->getOpt('day'));
             } else {
-                $doneDays = 5;
+                $doneDays = 6;
                 for ($i = 1; $i <= $doneDays; $i++) {
                     $advent->runDay($i);
                 }
@@ -36,7 +36,7 @@ if (isset($args)) {
                 echo "*** TESTING DAY $day ***" . PHP_EOL;
                 system("\"vendor/bin/phpunit\" --testdox advent/{$day}/{$day}Test.php");
             } else {
-                $doneDays = 5;
+                $doneDays = 6;
                 for ($i = 1; $i <= $doneDays; $i++) {
                     $day = 'Day' . sprintf('%02d', $i);
                     system("\"vendor/bin/phpunit\" --testdox advent/{$day}/{$day}Test.php");

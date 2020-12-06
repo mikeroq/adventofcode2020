@@ -29,6 +29,7 @@ class Day05 extends Day
             $this->part1();
         }
         for($seat=reset($this->seats); in_array($seat, $this->seats); $seat++);
+
         return $seat;
     }
 

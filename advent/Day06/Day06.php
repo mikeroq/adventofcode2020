@@ -28,20 +28,26 @@ class Day06 extends Day
     protected function part2()
     {
         foreach ($this->input as $answer) {
+            // input is an array, each element in array is the lines in the group as a single string
+            // split by line so now we have an array which each element is a person
             $people = explode("\r\n", $answer);
+            // init an array to store the answers
             $peopleArrays = [];
             foreach ($people as $person) {
+                // loop through and count the characters
+                // count_chars returns an array of the number of occurrences of every byte value 0-255
                 $peopleArrays[] = array_filter(count_chars($person));
             }
+            // check the number of elements in the array, if there is more then one we compare them
             if (count($peopleArrays) > 1) {
+                // array_intersect_key returns an array containing all the keys that are present in all provided arrays
                 $result = count(array_intersect_key(...$peopleArrays));
             } else {
+                // this is a single element array so we just count the answers
                 $result = count($peopleArrays[0]);
             }
-
             $this->answers[] = $result;
         }
-        //will clean up tomorrow
         return array_sum($this->answers);
     }
 

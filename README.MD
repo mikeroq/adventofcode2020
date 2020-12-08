@@ -12,8 +12,8 @@ Here are my Advent Of Code 2020 solutions, written in PHP.
 | ✅ [Day 4: Passport Processing](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day04)| 🌠 | 🌠 |
 | ✅ [Day 5: Binary Boarding](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day05)| 🌠 | 🌠 |
 | ✅ [Day 6: Custom Customs](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day06)| 🌠 | 🌠 |
-| [Day 7: TBD]()| | |
-| [Day 8: TBD]()| | |
+| [Day 7: TBD](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day07)| | |
+| ✅ [Day 8: Handheld Halting](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day08)| 🌠 | 🌠 |
 | [Day 9: TBD]()| | |
 | [Day 10: TBD]()| | |
 | [Day 11: TBD]()| | |

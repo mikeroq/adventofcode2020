@@ -5,13 +5,13 @@ Your flight to the major airline hub reaches cruising altitude without incident.
 
 Their [handheld game console](https://en.wikipedia.org/wiki/Handheld_game_console) won't turn on! They ask if you can take a look.
 
-You narrow the problem down to a strange _infinite loop_ in the boot code (your puzzle input) of the device. You should be able to fix it, but first you need to be able to run the code in isolation.
+You narrow the problem down to a strange **infinite loop** in the boot code (your puzzle input) of the device. You should be able to fix it, but first you need to be able to run the code in isolation.
 
-The boot code is represented as a text file with one _instruction_ per line of text. Each instruction consists of an _operation_ (`acc`, `jmp`, or `nop`) and an _argument_ (a signed number like `+4` or `-20`).
+The boot code is represented as a text file with one **instruction** per line of text. Each instruction consists of an **operation** (`acc`, `jmp`, or `nop`) and an **argument** (a signed number like `+4` or `-20`).
 
-*   `acc` increases or decreases a single global value called the _accumulator_ by the value given in the argument. For example, `acc +7` would increase the accumulator by 7\. The accumulator starts at `0`. After an `acc` instruction, the instruction immediately below it is executed next.
-*   `jmp` _jumps_ to a new instruction relative to itself. The next instruction to execute is found using the argument as an _offset_ from the `jmp` instruction; for example, `jmp +2` would skip the next instruction, `jmp +1` would continue to the instruction immediately below it, and `jmp -20` would cause the instruction 20 lines above to be executed next.
-*   `nop` stands for _No OPeration_ - it does nothing. The instruction immediately below it is executed next.
+*   `acc` increases or decreases a single global value called the **accumulator** by the value given in the argument. For example, `acc +7` would increase the accumulator by 7\. The accumulator starts at `0`. After an `acc` instruction, the instruction immediately below it is executed next.
+*   `jmp` **jumps** to a new instruction relative to itself. The next instruction to execute is found using the argument as an **offset** from the `jmp` instruction; for example, `jmp +2` would skip the next instruction, `jmp +1` would continue to the instruction immediately below it, and `jmp -20` would cause the instruction 20 lines above to be executed next.
+*   `nop` stands for **No OPeration** - it does nothing. The instruction immediately below it is executed next.
 
 For example, consider the following program:
 
@@ -39,19 +39,19 @@ These instructions are visited in this order:
 
 First, the `nop +0` does nothing. Then, the accumulator is increased from 0 to 1 (`acc +1`) and `jmp +4` sets the next instruction to the other `acc +1` near the bottom. After it increases the accumulator from 1 to 2, `jmp -4` executes, setting the next instruction to the only `acc +3`. It sets the accumulator to 5, and `jmp -3` causes the program to continue back at the first `acc +1`.
 
-This is an _infinite loop_: with this sequence of jumps, the program will run forever. The moment the program tries to run any instruction a second time, you know it will never terminate.
+This is an **infinite loop**: with this sequence of jumps, the program will run forever. The moment the program tries to run any instruction a second time, you know it will never terminate.
 
-Immediately _before_ the program would run an instruction a second time, the value in the accumulator is _`5`_.
+Immediately **before** the program would run an instruction a second time, the value in the accumulator is **`5`**.
 
-Run your copy of the boot code. Immediately before any instruction is executed a second time, _what value is in the accumulator?_
+Run your copy of the boot code. Immediately before any instruction is executed a second time, **what value is in the accumulator?**
 
 ## Part 2
 
-After some careful analysis, you believe that _exactly one instruction is corrupted_.
+After some careful analysis, you believe that **exactly one instruction is corrupted**.
 
-Somewhere in the program, _either_ a `jmp` is supposed to be a `nop`, _or_ a `nop` is supposed to be a `jmp`. (No `acc` instructions were harmed in the corruption of this boot code.)
+Somewhere in the program, **either** a `jmp` is supposed to be a `nop`, **or** a `nop` is supposed to be a `jmp`. (No `acc` instructions were harmed in the corruption of this boot code.)
 
-The program is supposed to terminate by _attempting to execute an instruction immediately after the last instruction in the file_. By changing exactly one `jmp` or `nop`, you can repair the boot code and make it terminate correctly.
+The program is supposed to terminate by **attempting to execute an instruction immediately after the last instruction in the file**. By changing exactly one `jmp` or `nop`, you can repair the boot code and make it terminate correctly.
 
 For example, consider the same program from above:
 
@@ -79,9 +79,9 @@ acc +1  | 4
 nop -4  | 5
 acc +6  | 6
 ```
-After the last instruction (`acc +6`), the program terminates by attempting to run the instruction below the last instruction in the file. With this change, after the program terminates, the accumulator contains the value _`8`_ (`acc +1`, `acc +1`, `acc +6`).
+After the last instruction (`acc +6`), the program terminates by attempting to run the instruction below the last instruction in the file. With this change, after the program terminates, the accumulator contains the value **`8`** (`acc +1`, `acc +1`, `acc +6`).
 
-Fix the program so that it terminates normally by changing exactly one `jmp` (to `nop`) or `nop` (to `jmp`). _What is the value of the accumulator after the program terminates?_
+Fix the program so that it terminates normally by changing exactly one `jmp` (to `nop`) or `nop` (to `jmp`). **What is the value of the accumulator after the program terminates?**
 
 ## Solution
 ```

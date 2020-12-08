@@ -5,36 +5,36 @@ use PHPUnit\Framework\TestCase;
 
 final class Day08Test extends TestCase
 {
-    public function testPart1TestInputEquals11(): void
+    public function testPart1TestInputEquals5(): void
     {
         $Day08 = new Day08();
         $Day08->importInput('./advent/Day08/test_input.txt');
 
-        $this->assertSame(11, $Day08->findFirstAnswer());
+        $this->assertSame(5, $Day08->findFirstAnswer());
     }
 
-    public function testPart2TestInputEquals6(): void
+    public function testPart2TestInputEquals8(): void
     {
         $Day08 = new Day08();
         $Day08->importInput('./advent/Day08/test_input.txt');
 
-        $this->assertSame(6, $Day08->findSecondAnswer());
+        $this->assertSame(8, $Day08->findSecondAnswer());
     }
 
 
-    public function testPart1EqualsRealAnswer6612(): void
+    public function testPart1EqualsRealAnswer1594(): void
     {
         $Day08 = new Day08();
         $Day08->importInput('./advent/Day08/input.txt');
 
-        $this->assertSame(6612, $Day08->findFirstAnswer());
+        $this->assertSame(1594, $Day08->findFirstAnswer());
     }
 
-    public function testPart2EqualsRealAnswer3268(): void
+    public function testPart2EqualsRealAnswer758(): void
     {
         $Day08 = new Day08();
         $Day08->importInput('./advent/Day08/input.txt');
 
-        $this->assertSame(3268, $Day08->findSecondAnswer());
+        $this->assertSame(758, $Day08->findSecondAnswer());
     }
 }

@@ -28,42 +28,34 @@ class Day09 extends Day
         return false;
     }
 
-    public function findSubArray($input, $target) {
-
+    public function findSubArray($input, $target)
+    {
         for ($i = 0; $i < count($input)-1; $i++) {
-            $sumArray = [];
-            $currentSum = $input[$i];
-            $j = $i + 1;
-            while ($j < count($input)-1) {
+            for ($sumArray = [], $currentSum = $input[$i], $j = $i + 1; $j < count($input)-1; $j++) {
                 if ($currentSum == $target) {
-
                     return $sumArray;
                 }
                 if ($currentSum > $target) {
                     break;
                 }
-                $currentSum = $currentSum + $input[$j];
+                $currentSum += $input[$j];
                 $sumArray[] = $input[$j];
-                $j++;
             }
         }
-        dump("you are here");
-        return $sumArray;
+        return false;
     }
     protected function part1()
     {
-
         $start = 0;
         $start2 = 25;
         for ($i = 0; $i < count($this->input); $i++) {
             $inputs = array_slice($this->input, $start+$i,25);
-            if ($this->findTwoSums($inputs, $this->input[$start2+$i]) == false) {
-                dump($start2+$i);
-                return $this->input[$start2+$i];
-
+            if (array_key_exists($start2+$i, $this->input)) {
+                if ($this->findTwoSums($inputs, $this->input[$start2+$i]) == false) {
+                    return $this->input[$start2+$i];
+                }
             }
         }
-
 
     }
 
@@ -71,8 +63,6 @@ class Day09 extends Day
     {
         $result = $this->findSubArray($this->input, 258585477);
         return min($result) + max($result);
-
-
     }
 
     public function findFirstAnswer()

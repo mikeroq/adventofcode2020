@@ -14,8 +14,8 @@ Here are my Advent Of Code 2020 solutions, written in PHP.
 | ✅ [Day 6: Custom Customs](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day06)| 🌠 | 🌠 |
 | [Day 7: TBD](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day07)| | |
 | ✅ [Day 8: Handheld Halting](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day08)| 🌠 | 🌠 |
-| [Day 9: TBD]()| | |
-| [Day 10: TBD]()| | |
+| ✅ [Day 9: Encoding Error](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day09)| 🌠 | 🌠 |
+| ✅ [Day 10: Adapter Array](https://github.com/pwncraft/adventofcode2020/tree/master/advent/Day10)| 🌠 | 🌠 |
 | [Day 11: TBD]()| | |
 | [Day 12: TBD]()| | |
 | [Day 13: TBD]()| | |

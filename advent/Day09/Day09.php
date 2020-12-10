@@ -6,9 +6,6 @@ use pwnstar\AdventOfCode2020\Day;
 
 class Day09 extends Day
 {
-    protected array $instructions;
-    protected int $acc = 0;
-    protected int $count;
 
     public function formatInput(): void
     {
@@ -56,7 +53,7 @@ class Day09 extends Day
                 }
             }
         }
-
+        return 0;
     }
 
     protected function part2()
